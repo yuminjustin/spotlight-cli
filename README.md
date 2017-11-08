@@ -1,2 +1,2 @@
 # spotlight
-yeoman开发脚手架
+yeoman开发脚手架，开发中...
