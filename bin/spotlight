@@ -12,7 +12,7 @@ program
 	.version(require('../package').version)
 
 program
-	.usage('<command>')
+	.usage('<command> [option]')
 
 program
 	.command('init')
@@ -24,24 +24,24 @@ program
 
 program.on('--help', () => {
 	console.log()
-	console.log('  示例:')
+	console.log('  示例/example:')
 	console.log()
-	console.log(chalk.green('    # 创建一个spotlight-template的项目'))
+	console.log(chalk.green('    # 创建一个项目/ create a project'))
 	console.log('    $ spotlight init react my-project')
 	console.log()
-	console.log(chalk.yellow('    spotlight可以创建的template有：'))
+	console.log(chalk.yellow('    spotlight可以创建的template有/ can be supported are as follows：'))
 	console.log()
-	console.log(chalk.blue('    1.normal    ') + '(常规es6环境)')
+	console.log(chalk.blue('    1.normal    ') + '(es6)')
 	console.log()
-	console.log(chalk.blue('    2.react     ') + '(常规react环境)')
+	console.log(chalk.blue('    2.react     ') + '(react)')
 	console.log()
-	console.log(chalk.blue('    3.react_all ') + '(react+redux+router+and环境)')
+	console.log(chalk.blue('    3.react_all ') + '(react+redux+router+and)')
 	console.log()
-	console.log(chalk.blue('    4.vue       ') + '(常规vue环境)')
+	console.log(chalk.blue('    4.vue       ') + '(vue)')
 	console.log()
-	console.log(chalk.blue('    5.vue_all   ') + '(vue+vuex+router+element-ui环境)')
+	console.log(chalk.blue('    5.vue_all   ') + '(vue+vuex+router+element-ui)')
 	console.log()
-	console.log(chalk.blue('    6.backbone  ') + '(backbone+router环境)')
+	console.log(chalk.blue('    6.backbone  ') + '(backbone+router)')
 })
 
 
