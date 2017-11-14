@@ -45,7 +45,7 @@ module.exports = (program) => {
         if (exists(to)) {
             inquirer.prompt([{
                 type: 'confirm',
-                message: inPlace ? '在当前目录中生成项目?' : '此目录已存在，是否继续?',
+                message: inPlace ? '在当前目录中生成项目/Generate project in current directory?' : '此目录已存在，是否继续/Target directory exists. Continue?',
                 name: 'ok'
             }]).then(answers => {
                 if (answers.ok) {
@@ -69,7 +69,7 @@ module.exports = (program) => {
 
 
     function downloadAndGenerate() {
-        const spinner = ora('正在下载模板')
+        const spinner = ora('正在下载模板/downloading template')
         spinner.start()
         // 删除本地文件
         if (exists(tmp)) rm(tmp)
@@ -78,7 +78,7 @@ module.exports = (program) => {
             clone
         }, err => {
             spinner.stop()
-            if (err) logger.fatal('下载失败 ' + template + ': ' + err.message.trim())
+            if (err) logger.fatal('下载失败/download failed ' + template + ': ' + err.message.trim())
             generate(name, tmp, to, err => {
                 if (err) logger.fatal(err)
                 console.log()
