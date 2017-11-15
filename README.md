@@ -2,7 +2,7 @@
     <img src="https://github.com/yuminjustin/spotlight-cli/blob/master/static/sp_wihte.png">
 </p>
 一个简单的前端项目脚手架，整体构建参照vue-cli.  （模板正在开发中，命令可以使用）<br>
-A simple front-end project scaffolding, the overall build reference vue-cli. (Template is under development, the order can be used)<br>
+A simple front-end project scaffolding, the overall build reference vue-cli. (Template is under development)<br>
 
 ### Install
 
