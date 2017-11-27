@@ -21,10 +21,11 @@ example:
 可以支持的template如下(安装完毕后使用 “spotlight” 命令可查阅)：<br>
 The templates that can be supported are as follows (use the “spotlight ” command after installation)<br><br>
 
-    1. normal         (es6)   Available
-    2. react             (react)  Available
+    1. normal         (es6)  
+    2. react             (react)  
     3. react_all       (react+redux+router+and) ing....
-    4. vue               (vue) ing....
+    4. vue               (vue)
     5. vue_all         (vue+vuex+router+element-ui) ing....
-    6. backbone    (backbone+router)  Available
+    6. backbone    (backbone+router)  
+    7. mithril          (mithril+router)  
 
