@@ -23,7 +23,7 @@ The templates that can be supported are as follows (use the “spotlight ” com
 
     1. normal         (es6)  
     2. react             (react)  
-    3. react_all       (react+redux+router+and)
+    3. react_all       (react+redux+router+ant)
     4. vue               (vue)
     5. vue_all         (vue+vuex+router+element-ui) 
     6. backbone    (backbone+router)
