@@ -35,13 +35,16 @@ program.on('--help', () => {
 	console.log()
 	console.log(chalk.blue('    2.react     ') + '(react)')
 	console.log()
-	console.log(chalk.blue('    3.react_all ') + '(react+redux+router+and)')
+	console.log(chalk.blue('    3.react_all ') + '(react+redux+router+ant)')
 	console.log()
 	console.log(chalk.blue('    4.vue       ') + '(vue)')
 	console.log()
 	console.log(chalk.blue('    5.vue_all   ') + '(vue+vuex+router+element-ui)')
 	console.log()
 	console.log(chalk.blue('    6.backbone  ') + '(backbone+router)')
+	console.log()
+	console.log(chalk.blue('    7.mithril   ') + '(mithril+router)')
+	console.log()
 })
 
 
