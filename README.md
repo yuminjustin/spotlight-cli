@@ -28,4 +28,9 @@ The templates that can be supported are as follows (use the “spotlight ” com
     5. vue_all         (vue+vuex+router+element-ui) 
     6. backbone    (backbone+router)
     7. mithril          (mithril+router)  
+    8. san            (san+router)
+    
+    
+<br><br>
+(san by baidu, offical UI san-mui has many bugs, make componets by yourself)
 
