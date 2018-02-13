@@ -29,6 +29,7 @@ The templates that can be supported are as follows (use the “spotlight ” com
     6. backbone       (backbone+router)
     7. mithril            (mithril+router)
     8. san                (san+router  test...)
+    9. mbox             (react+mbox+router+ant)
     
     
 <br><br>
