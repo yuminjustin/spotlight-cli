@@ -45,6 +45,10 @@ program.on('--help', () => {
 	console.log()
 	console.log(chalk.blue('    7.mithril   ') + '(mithril+router)')
 	console.log()
+	console.log(chalk.blue('    8.san       ') + '(san+router)')
+	console.log()
+	console.log(chalk.blue('    9.mobx      ') + '(react+mobx+router+ant)')
+	console.log()
 })
 
 
