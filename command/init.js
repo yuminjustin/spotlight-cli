@@ -27,7 +27,7 @@ module.exports = (program) => {
         .usage('<template-name> [project-name]')
         .option('-c, --clone', 'use git clone')
         .option('--offline', 'use cached template')
-    const template = program.args[0] // 使用模板
+    const template = program.args[0] == 'mobx' ? 'react-mobx' : program.args[0] // 使用模板
     const url = `yuminjustin/spotlight-templates-${template}`
     const rawName = program.args[1] // 目录
     const inPlace = !rawName || rawName === '.' // 是否在当前目录
@@ -35,7 +35,7 @@ module.exports = (program) => {
     const to = path.resolve(rawName || '.') // 目标目录
 
     const clone = program.clone || false
-    
+
     // 本地
     const tmp = path.join(home, '.spotlight-templates', template.replace(/\//g, '-'))
 
