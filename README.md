@@ -36,7 +36,7 @@ The templates that can be supported are as follows (use the “spotlight ” com
 
 ### Suggest
 #### 考虑IE 
-        如果你的项目需要兼容到IE8甚至更低，建议使用san和backbone模板，优先推荐使用san。san模板去掉了router，需要自行配置；san拥有虚拟dom和数据绑定使你项目跟高效和易于管理；<br><br>
+        如果你的项目需要兼容到IE8甚至更低，建议使用san和backbone模板，优先推荐使用san。san模板去掉了router，需要自行配置；san拥有虚拟dom和数据绑定使你项目更高效和易于管理；<br><br>
 #### 不考虑IE
         移动端推荐使用mithril 或者 vue, 复杂一些需求而且今后有很多扩展的项目建议用 vue 或 react；<br><br>
         大型项目推荐使用vue全家桶 或者 react+mbox组合；
