@@ -26,9 +26,9 @@ The templates that can be supported are as follows (use the “spotlight ” com
     3. react_all         (react+redux+router+ant)
     4. vue                (vue)
     5. vue_all           (vue+vuex+router+element-ui) 
-    6. backbone       (backbone+router)
+    6. backbone       (backbone+router   IE)
     7. mithril            (mithril+router)
-    8. san                (san)
+    8. san                (san  IE)
     9. mobx             (react+mobx+router+ant)
     
     
