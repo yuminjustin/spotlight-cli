@@ -33,6 +33,8 @@ The templates that can be supported are as follows (use the “spotlight ” com
     
     
 <br><br>
+### gulp
+        多套模板都涉及到和gulp的配合使用，所以请确保你的gulp是全局安装的！
 
 ### Suggest
 #### 考虑IE 
@@ -40,3 +42,10 @@ The templates that can be supported are as follows (use the “spotlight ” com
 #### 不考虑IE
         移动端推荐使用mithril 或者 vue, 复杂一些需求而且今后有很多扩展的项目建议用 vue 或 react；<br><br>
         大型项目推荐使用vue全家桶 或者 react+mobx组合；
+
+### History router 支持
+         如果要使用History router，模板3，5，9 在配置（config.js）中将html5Router设置为true，build后的代码将默认支持Apache服务器，ngix 需要另外配置，如下
+         
+             location / {
+                  try_files $uri $uri/ /index.html;
+              }
