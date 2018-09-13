@@ -21,15 +21,15 @@ example:
 可以支持的template如下(安装完毕后使用 “spotlight” 命令可查阅)：<br>
 The templates that can be supported are as follows (use the “spotlight ” command after installation)<br><br>
 
-    1. normal           es6
-    2. react              react
-    3. redux         react+redux+router+ant
-    4. vue                vue
-    5. vuex           vue+vuex+router+element-ui 
-    6. backbone       backbone+router IE
-    7. mithril            mithril+router
-    8. san                san  IE
-    9. mobx             react+mobx+router+ant
+    1. normal            es6
+    2. react               react
+    3. redux              react+redux+router+ant
+    4. vue                 vue
+    5. vuex                vue+vuex+router+element-ui 
+    6. backbone        backbone+router IE
+    7. mithril             mithril+router
+    8. san                  san  IE
+    9. mobx               react+mobx+router+ant
     
 <br>
 
