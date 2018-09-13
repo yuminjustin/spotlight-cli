@@ -1,60 +1,58 @@
 #!/usr/bin/env node
 
 const download = require('download-git-repo')
-const program = require('commander')
 const exists = require('fs').existsSync
 const path = require('path')
 const ora = require('ora')
 const home = require('user-home')
-const tildify = require('tildify')
-const chalk = require('chalk')
 const inquirer = require('inquirer')
 const rm = require('rimraf').sync
 const generate = require('../lib/generate')
 const checkVersion = require('../lib/check-version')
 
 
-const untils = require('../lib/untils')
-const logger = untils.logger
-const warnings = untils.warnings
-const getTemplatePath = untils.getTemplatePath
+const utils = require('../lib/utils')
+const logger = utils.logger
+const warnings = utils.warnings
 
 
-module.exports = (program) => {
+module.exports = (program, c) => {
+    program.usage('[project-name]').option('-c, --clone', 'use git clone').option('--offline', 'use cached template')
 
+    let template = c,
+        url = '',
+        rawName = program.args[0]; // 目录;
+    switch (c) {
+        case "redux":
+            template = 'react-redux';
+            break;
+        case "mobx":
+            template = 'react-mobx';
+            break;
+        case "vuex":
+            template = 'vue-vuex';
+            break;
+    }
 
-    program
-        .usage('<template-name> [project-name]')
-        .option('-c, --clone', 'use git clone')
-        .option('--offline', 'use cached template')
-    const template = program.args[0] == 'mobx' ? 'react-mobx' : program.args[0] // 使用模板
-    const url = `yuminjustin/spotlight-templates-${template}`
-    const rawName = program.args[1] // 目录
+    url = `yuminjustin/spotlight-templates-${template}`;
+
     const inPlace = !rawName || rawName === '.' // 是否在当前目录
     const name = inPlace ? path.relative('../', process.cwd()) : rawName
     const to = path.resolve(rawName || '.') // 目标目录
-
     const clone = program.clone || false
-
     // 本地
     const tmp = path.join(home, '.spotlight-templates', template.replace(/\//g, '-'))
 
-
     try {
-
         if (exists(to)) {
             inquirer.prompt([{
                 type: 'confirm',
-                message: inPlace ? '在当前目录中生成项目/Generate project in current directory?' : '此目录已存在，是否继续/Target directory exists. Continue?',
+                message: inPlace ? '在当前目录中生成项目' : '此目录已存在，是否继续',
                 name: 'ok'
             }]).then(answers => {
-                if (answers.ok) {
-                    run()
-                }
+                if (answers.ok) run()
             }).catch(logger.fatal)
-        } else {
-            run()
-        }
+        } else run()
 
     } catch (e) {
         warnings.commandError()
@@ -69,7 +67,7 @@ module.exports = (program) => {
 
 
     function downloadAndGenerate() {
-        const spinner = ora('正在下载模板/downloading template')
+        const spinner = ora('正在下载模板')
         spinner.start()
         // 删除本地文件
         if (exists(tmp)) rm(tmp)
@@ -78,7 +76,7 @@ module.exports = (program) => {
             clone
         }, err => {
             spinner.stop()
-            if (err) logger.fatal('下载失败/download failed ' + template + ': ' + err.message.trim())
+            if (err) logger.fatal('下载失败 ' + template + ': ' + err.message.trim())
             generate(name, tmp, to, err => {
                 if (err) logger.fatal(err)
                 console.log()

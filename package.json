@@ -1,6 +1,6 @@
 {
   "name": "spotlight-cli",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "description": "A simple CLI for creating your projects",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,13 @@
     "spotlight": "bin/spotlight"
   },
   "keywords": [
-    "vue","react","mithril","san","mobx","webpack","scaffold"
+    "vue",
+    "react",
+    "mithril",
+    "san",
+    "mobx",
+    "webpack",
+    "scaffold"
   ],
   "repository": {
     "type": "git",

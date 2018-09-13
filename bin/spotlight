@@ -3,57 +3,53 @@
 'use strict'
 
 const chalk = require('chalk')
+const program = require('commander')
+const commandArr = ['normal', 'react', 'redux', 'vue', 'vuex', 'backbone', 'mithril', 'san', 'mobx']
 
 process.env.NODE_PATH = __dirname + '/../node_modules/'
+program.version(require('../package').version)
+program.usage('<command> [option]')
 
-const program = require('commander')
-
-program
-	.version(require('../package').version)
-
-program
-	.usage('<command> [option]')
-
-program
-	.command('init')
-	.description('创建你的项目 Generate your project')
-	.alias('i')
-	.action(() => {
-		require('../command/init')(program)
+commandArr.map(c => {
+	let str = style_commander(c);
+	program.command(c).description('创建 ' + str + ' 开发环境').action(() => {
+		require('../command/init')(program, c)
 	})
+})
+
+
+function style_commander(str) {
+	let l = 8 - str.length;
+	for (let i = 0; i < l; i++) {
+		str += " "
+	}
+	return str
+}
 
 program.on('--help', () => {
 	console.log()
-	console.log('  示例/example:')
+	console.log(chalk.gray('示例'))
 	console.log()
-	console.log(chalk.green('    # 创建一个项目/ create a project'))
-	console.log('    $ spotlight init react my-project')
+	console.log(chalk.green('    # 创建一个项目'))
+	console.log('    $ spotlight react my-project')
 	console.log()
-	console.log(chalk.yellow('    spotlight可以创建的template有/ can be supported are as follows：'))
 	console.log()
-	console.log(chalk.blue('    1.normal    ') + '(es6)')
-	console.log()
-	console.log(chalk.blue('    2.react     ') + '(react)')
-	console.log()
-	console.log(chalk.blue('    3.react_all ') + '(react+redux+router+ant)')
-	console.log()
-	console.log(chalk.blue('    4.vue       ') + '(vue)')
-	console.log()
-	console.log(chalk.blue('    5.vue_all   ') + '(vue+vuex+router+element-ui)')
-	console.log()
-	console.log(chalk.blue('    6.backbone  ') + '(backbone+router  IE)')
-	console.log()
-	console.log(chalk.blue('    7.mithril   ') + '(mithril+router)')
-	console.log()
-	console.log(chalk.blue('    8.san       ') + '(san  IE)')
-	console.log()
-	console.log(chalk.blue('    9.mobx      ') + '(react+mobx+router+ant)')
-	console.log()
+	console.log(chalk.gray('spotlight templates：'))
+	console.log("-------------------------------------------------")
+	console.log(chalk.cyan('    1.normal    ') + 'es6')
+	console.log(chalk.cyan('    2.react     ') + 'react')
+	console.log(chalk.cyan('    3.redux     ') + 'react+redux+router+ant')
+	console.log(chalk.cyan('    4.vue       ') + 'vue')
+	console.log(chalk.cyan('    5.vuex      ') + 'vue+vuex+router+element-ui')
+	console.log(chalk.cyan('    6.backbone  ') + 'backbone+router IE')
+	console.log(chalk.cyan('    7.mithril   ') + 'mithril+router')
+	console.log(chalk.cyan('    8.san       ') + 'san IE')
+	console.log(chalk.cyan('    9.mobx      ') + 'react+mobx+router+ant')
+	console.log("-------------------------------------------------")
 })
 
 
 program.parse(process.argv)
-
 if (!program.args.length) {
 	program.help()
 }
