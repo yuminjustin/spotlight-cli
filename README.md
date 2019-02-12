@@ -29,7 +29,7 @@ example:
 <blockquote>
 <br>
 可以支持的template如下(安装完毕后使用 “spotlight” 命令可查阅)：<br>
-The templates that can be supported are as follows (use the “spotlight ” command after installation)<br>
+The templates that can be supported are as follows (use the “spotlight ” command after installation)
 <br><br>
 </blockquote>
 
