@@ -21,7 +21,8 @@ module.exports = (program, c) => {
 
     let template = c,
         url = '',
-        rawName = program.args[0]; // 目录;
+        rawName = program.args[0]; // 目录
+
     switch (c) {
         case "redux":
             template = 'react-redux';
@@ -32,7 +33,11 @@ module.exports = (program, c) => {
         case "vuex":
             template = 'vue-vuex';
             break;
+        case "ts":
+            template = 'ts-' + rawName;
+            break;
     }
+    if (c == "ts") rawName = program.args[1]; // ts 目录
 
     url = `yuminjustin/spotlight-templates-${template}`;
 
