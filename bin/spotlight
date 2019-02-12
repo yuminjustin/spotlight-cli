@@ -4,7 +4,7 @@
 
 const chalk = require('chalk')
 const program = require('commander')
-const commandArr = ['normal', 'react', 'redux', 'vue', 'vuex', 'backbone', 'mithril', 'san', 'mobx']
+const commandArr = ['normal', 'react', 'redux', 'vue', 'vuex', 'backbone', 'mithril', 'san', 'mobx', 'ts']
 
 process.env.NODE_PATH = __dirname + '/../node_modules/'
 program.version(require('../package').version)
@@ -12,39 +12,46 @@ program.usage('<command> [option]')
 
 commandArr.map(c => {
 	let str = style_commander(c);
-	program.command(c).description('创建 ' + str + ' 开发环境').action(() => {
+	program.command(c).description(str).action(() => {
 		require('../command/init')(program, c)
 	})
 })
 
 
 function style_commander(str) {
-	let l = 8 - str.length;
-	for (let i = 0; i < l; i++) {
-		str += " "
-	}
-	return str
+	if(str=='normal') return "es6开发环境";
+	else if(str=='react') return "react开发环境";
+	else if(str=='redux') return "react+redux+router+antd";
+	else if(str=='vue') return "vue开发环境";
+	else if(str=='vuex') return "vue+vuex+router+element-ui";
+	else if(str=='backbone') return "怀旧框架";
+	else if(str=='mithril') return "mithril开发环境";
+	else if(str=='san') return "san开发环境";
+	else if(str=='mobx') return "react+mobx+router+antd";
+	else if(str=='ts') return "typescript模板（预研性）";
 }
 
 program.on('--help', () => {
 	console.log()
-	console.log(chalk.gray('示例'))
+	console.log(chalk.bgBlack('  示例  '))
 	console.log()
 	console.log(chalk.green('    # 创建一个项目'))
-	console.log('    $ spotlight react my-project')
+	console.log(chalk.bold.rgb(238, 120, 8)('      spotlight react my-project'))
 	console.log()
-	console.log()
-	console.log(chalk.gray('spotlight templates：'))
+	console.log(chalk.bgRedBright(' spotlight templates：'))
 	console.log("-------------------------------------------------")
-	console.log(chalk.cyan('    1.normal    ') + 'es6')
-	console.log(chalk.cyan('    2.react     ') + 'react')
-	console.log(chalk.cyan('    3.redux     ') + 'react+redux+router+ant')
-	console.log(chalk.cyan('    4.vue       ') + 'vue')
-	console.log(chalk.cyan('    5.vuex      ') + 'vue+vuex+router+element-ui')
-	console.log(chalk.cyan('    6.backbone  ') + 'backbone+router IE')
-	console.log(chalk.cyan('    7.mithril   ') + 'mithril+router')
-	console.log(chalk.cyan('    8.san       ') + 'san IE')
-	console.log(chalk.cyan('    9.mobx      ') + 'react+mobx+router+ant')
+	console.log(chalk.cyanBright('    1.normal       ') + 'es6')
+	console.log(chalk.cyanBright('    2.react        ') + 'react')
+	console.log(chalk.cyanBright('    3.redux        ') + 'react+redux+router+antd')
+	console.log(chalk.cyanBright('    4.vue          ') + 'vue')
+	console.log(chalk.cyanBright('    5.vuex         ') + 'vue+vuex+router+element-ui')
+	console.log(chalk.cyanBright('    6.backbone     ') + 'backbone+router IE')
+	console.log(chalk.cyanBright('    7.mithril      ') + 'mithril+router')
+	console.log(chalk.cyanBright('    8.san          ') + 'san IE')
+	console.log(chalk.cyanBright('    9.mobx         ') + 'react+mobx+router+antd')
+	console.log(chalk.cyan('    10.ts normal   ') + 'typescript')
+	console.log(chalk.cyan('    11.ts react    ') + 'typescript+react')
+	console.log(chalk.cyan('    12.ts vue      ') + 'typescript+vue')
 	console.log("-------------------------------------------------")
 })
 
