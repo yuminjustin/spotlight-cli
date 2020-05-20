@@ -30,6 +30,9 @@ module.exports = (program, c) => {
         case "mobx":
             template = 'react-mobx';
             break;
+        case "hook":
+            template = 'react-mobx-hook';
+            break;
         case "vuex":
             template = 'vue-vuex';
             break;

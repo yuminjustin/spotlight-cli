@@ -33,18 +33,19 @@ The templates that can be supported are as follows (use the “spotlight ” com
 <br><br>
 </blockquote>
 
-    1. normal               es6
+    1. normal                 es6
     2. react                  react
-    3. redux                 react+redux+router+antd
+    3. redux                  react+redux+router+antd
     4. vue                    vue
-    5. vuex                   vue+vuex+router+element-ui
-    6. backbone           backbone+router IE
+    5. vuex                   vue+vuex+route+element-ui
+    6. backbone               backbone+router IE
     7. mithril                mithril+router
     8. san                    san IE
-    9. mobx                 react+mobx+router+antd
-    10. ts normal         typescript
-    11. ts react            typescript+react
-    12. ts vue              typescript+vue
+    9. mobx                   react+mobx+router+antd3
+    10. ts normal             typescript
+    11. ts react              typescript+react
+    12. ts vue                typescript+vue
+    13. hook                  react hook+mobx+router+antd4
 
 <br>
 
@@ -70,3 +71,5 @@ The templates that can be supported are as follows (use the “spotlight ” com
 ### 添加autoprefixer 和 css-modules
 
 ### Typescript (research)
+
+### 新增React hook 模板
