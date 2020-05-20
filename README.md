@@ -47,20 +47,44 @@ The templates that can be supported are as follows (use the “spotlight ” com
     12. ts vue                typescript+vue
     13. hook                  react hook+mobx+router+antd4
 
-<br>
+## windows10 error
+    ...
+    参阅 https:/go.microsoft.com/fwlink/?LinkID=135170 中的 about_Execution_Policies。
+    ...
+    + spotlight
+    +
+        + CategoryInfo          : SecurityError: (:) [],PSSecurityException
+        + FullyQualifiedErrorId : UnauthorizedAccess
+
+<blockquote>
+如果在window10 PowerShell 使用中遇到上述报错时，简单设置一下即可：<br/>
+在开始菜单搜索powershell，右键以管理员运行<br/>
+输入： set-executionpolicy remotesigned  回车 <br/>
+再输入：y <br/>
+完毕
+</blockquote>
 
 ## gulp
+<blockquote>
 多套模板都涉及到和gulp的配合使用，所以请确保你的gulp是全局安装的！
+</blockquote>
 
 ## Suggest
 ### 考虑IE
+<blockquote>
 如果你的项目需要兼容到IE8甚至更低，建议使用san和backbone模板，优先推荐使用san。san模板去掉了router，需要自行配置；san拥有虚拟dom和数据绑定使你项目更高效和易于管理；<br><br>
+</blockquote>
+
 ### 不考虑IE
+<blockquote>
 移动端推荐使用mithril 或者 vue, 复杂一些需求而且今后有很多扩展的项目建议用 vue 或 react；<br>
 大型项目推荐使用vue全家桶 或者 react+mobx组合；
+</blockquote>
 
 ### History router 支持
+<blockquote>
 如果要使用History router，模板3，5，9 在配置（config.js）中将html5Router设置为true，build后的代码将默认支持Apache服务器，ngix 需要另外配置，如下：
+</blockquote>
 
         location / {
             try_files $uri $uri/ /index.html;

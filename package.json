@@ -1,7 +1,7 @@
 {
   "name": "spotlight-cli",
-  "version": "2.0.5",
-  "description": "A simple CLI for creating your projects",
+  "version": "2.0.6",
+  "description": "A simple cli for creating your projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
