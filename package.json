@@ -1,6 +1,6 @@
 {
   "name": "spotlight-cli",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "A simple cli for creating your projects",
   "main": "index.js",
   "scripts": {
@@ -27,21 +27,21 @@
   "author": "yuminjustin@163.com",
   "license": "MIT",
   "dependencies": {
-    "async": "^3.0.1",
+    "async": "^3.2.0",
     "chalk": "^2.4.2",
-    "commander": "^2.20.0",
+    "commander": "^2.20.3",
     "consolidate": "^0.15.1",
     "download-git-repo": "^1.1.0",
-    "handlebars": "^4.0.12",
-    "inquirer": "^6.2.0",
+    "handlebars": "^4.7.7",
+    "inquirer": "^6.5.2",
     "metalsmith": "^2.3.0",
-    "minimatch": "^3.0.0",
+    "minimatch": "^3.0.4",
     "multimatch": "^2.1.0",
-    "ora": "^3.0.0",
+    "ora": "^3.4.0",
     "read-metadata": "^1.0.0",
-    "request": "^2.88.0",
-    "rimraf": "^2.6.2",
-    "semver": "^5.6.0",
+    "request": "^2.88.2",
+    "rimraf": "^2.7.1",
+    "semver": "^5.7.1",
     "tildify": "^1.2.0",
     "uid": "0.0.2",
     "user-home": "^2.0.0",
@@ -52,7 +52,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue-libs": "^3.0.0",
     "execa": "^1.0.0",
-    "mocha": "^5.2.0"
+    "mocha": "^8.4.0"
   },
   "engines": {
     "node": ">=6.0.0"
