@@ -35,17 +35,18 @@ The templates that can be supported are as follows (use the “spotlight ” com
 
     1. normal                 es6
     2. react                  react
-    3. redux                  react+redux+router+antd
-    4. vue                    vue
-    5. vuex                   vue+vuex+route+element-ui
-    6. backbone               backbone+router IE
+    3. redux                  react+redux+router+antd(bad)
+    4. vue                    vue2
+    5. vuex                   vue2+vuex+route+element-ui
+    6. backbone               backbone+router IE(bad)
     7. mithril                mithril+router
-    8. san                    san IE
-    9. mobx                   react+mobx+router+antd3
-    10. ts normal             typescript
-    11. ts react              typescript+react
-    12. ts vue                typescript+vue
-    13. hook                  react hook+mobx+router+antd4
+    8. san                    san IE(bad)
+    9. mobx                   react+mobx+router+antd3(bad)
+    10. hook                  react hook+mobx+router+antd4
+    11. ts normal             typescript
+    12. ts react              typescript+react
+    13. ts vue                typescript+vue2
+    14. ts hook               react hook+typescript+mobx+router+antd4
 
 ## windows10 error
     ...
@@ -83,14 +84,14 @@ The templates that can be supported are as follows (use the “spotlight ” com
 
 ### History router 支持
 <blockquote>
-如果要使用History router，模板3，5，9 在配置（config.js）中将html5Router设置为true，build后的代码将默认支持Apache服务器，ngix 需要另外配置，如下：
+如果要使用History router，在配置（config.js）中将html5Router设置为true，build后的代码将默认支持Apache服务器，ngix 需要另外配置，如下：
 </blockquote>
 
         location / {
             try_files $uri $uri/ /index.html;
         }
 
-### spotlight模板已全部升级至webpack4
+### spotlight模板已全部升级至webpack5（部分）
 
 ### 添加autoprefixer 和 css-modules
 
