@@ -21,7 +21,8 @@ module.exports = (program, c) => {
 
     let template = c,
         url = '',
-        rawName = program.args[0]; // 目录
+        rawName = program.args[0], // 目录
+        hook = 'react-mobx-hook';
 
     switch (c) {
         case "redux":
@@ -31,13 +32,13 @@ module.exports = (program, c) => {
             template = 'react-mobx';
             break;
         case "hook":
-            template = 'react-mobx-hook';
+            template = hook;
             break;
         case "vuex":
             template = 'vue-vuex';
             break;
         case "ts":
-            template = 'ts-' + rawName;
+            template = 'ts-' + (rawName == 'hook' ? hook : rawName);
             break;
     }
     if (c == "ts") rawName = program.args[1]; // ts 目录
@@ -50,6 +51,7 @@ module.exports = (program, c) => {
     const clone = program.clone || false
     // 本地
     const tmp = path.join(home, '.spotlight-templates', template.replace(/\//g, '-'))
+
 
     try {
         if (exists(to)) {
