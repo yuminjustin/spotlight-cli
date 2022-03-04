@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const download = require('download-git-repo')
 const exists = require('fs').existsSync
 const path = require('path')
@@ -38,7 +37,7 @@ module.exports = (program, c) => {
             template = 'vue-vuex';
             break;
         case "ts":
-            template = 'ts-' + (rawName == 'hook' ? hook : rawName);
+            template = 'ts-' + (rawName == 'hook' ? hook : rawName == 'vue3' ? 'vue3-pinia' : rawName);
             break;
     }
     if (c == "ts") rawName = program.args[1]; // ts 目录

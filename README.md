@@ -27,11 +27,11 @@ example:
     spotlight ts react my-project
 
 <blockquote>
-<br>
 可以支持的template如下(安装完毕后使用 “spotlight” 命令可查阅)：<br>
 The templates that can be supported are as follows (use the “spotlight ” command after installation)
-<br><br>
+<br>
 </blockquote>
+<br>
 
     1. normal                 es6
     2. react                  react
@@ -47,8 +47,9 @@ The templates that can be supported are as follows (use the “spotlight ” com
     12. ts react              typescript+react
     13. ts vue                typescript+vue2
     14. ts hook               react hook+typescript+mobx+router+antd4
+    15. ts vue3               vue3+typescript+pinia+router+arco.design
 
-## windows10 error
+### windows10 error （可能发生的）
     ...
     参阅 https:/go.microsoft.com/fwlink/?LinkID=135170 中的 about_Execution_Policies。
     ...
@@ -64,37 +65,29 @@ The templates that can be supported are as follows (use the “spotlight ” com
 再输入：y <br/>
 完毕
 </blockquote>
+<br>
 
-## gulp
+### 考虑IE （bad）
+<blockquote>
+如果你的项目需要兼容到IE8甚至更低，建议使用san和backbone模板，优先推荐使用san。san模板去掉了router，需要自行配置；san拥有虚拟dom和数据绑定使你项目更高效和易于管理；
+</blockquote>
+<br>
+
+### gulp
 <blockquote>
 多套模板都涉及到和gulp的配合使用，所以请确保你的gulp是全局安装的！
+<br/>
+也可以自行去掉
 </blockquote>
+<br>
 
-## Suggest
-### 考虑IE
-<blockquote>
-如果你的项目需要兼容到IE8甚至更低，建议使用san和backbone模板，优先推荐使用san。san模板去掉了router，需要自行配置；san拥有虚拟dom和数据绑定使你项目更高效和易于管理；<br><br>
-</blockquote>
-
-### 不考虑IE
-<blockquote>
-移动端推荐使用mithril 或者 vue, 复杂一些需求而且今后有很多扩展的项目建议用 vue 或 react；<br>
-大型项目推荐使用vue全家桶 或者 react+mobx组合；
-</blockquote>
-
-### History router 支持
+### History router 支持 （参考）
 <blockquote>
 如果要使用History router，在配置（config.js）中将html5Router设置为true，build后的代码将默认支持Apache服务器，ngix 需要另外配置，如下：
 </blockquote>
+<br>
 
         location / {
             try_files $uri $uri/ /index.html;
         }
 
-### spotlight模板已全部升级至webpack5（部分）
-
-### 添加autoprefixer 和 css-modules
-
-### Typescript (research)
-
-### 新增React hook 模板

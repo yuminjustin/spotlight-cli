@@ -21,15 +21,15 @@ commandArr.map(c => {
 function style_commander(str) {
 	if(str=='normal') return "es6开发环境";
 	else if(str=='react') return "react开发环境";
-	else if(str=='redux') return "react+redux+router+antd";
+	else if(str=='redux') return "react+redux+router+antd (bad)";
 	else if(str=='vue') return "vue开发环境";
 	else if(str=='vuex') return "vue+vuex+router+element-ui";
-	else if(str=='backbone') return "怀旧框架";
+	else if(str=='backbone') return "怀旧框架 (bad)";
 	else if(str=='mithril') return "mithril开发环境";
-	else if(str=='san') return "san开发环境";
-	else if(str=='mobx') return "react+mobx+router+antd";
-	else if(str=='hook') return "react hook+mobx+router+antd";
-	else if(str=='ts') return "typescript模板（预研性）";
+	else if(str=='san') return "san开发环境 (bad)";
+	else if(str=='mobx') return "react+mobx+router+antd3";
+	else if(str=='hook') return "react hook+mobx+router+antd4";
+	else if(str=='ts') return "typescript模板";
 }
 
 program.on('--help', () => {
@@ -60,6 +60,7 @@ program.on('--help', () => {
 	console.log(chalk.cyan('    12.ts react              ') + 'typescript+react')
 	console.log(chalk.cyan('    13.ts vue                ') + 'typescript+vue2')
 	console.log(chalk.cyan('    14.ts hook               ') + 'react hook+typescript+mobx+router+antd4')
+	console.log(chalk.cyan('    15.ts vue3               ') + 'vue3+typescript+pinia+router+arco-design')
 	console.log(chalk.blue("-------------------------------------------------"))
 })
 
