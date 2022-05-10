@@ -18,6 +18,8 @@ A simple front-end project scaffolding, the overall build reference vue-cli 2.0.
     spotlight <template-name> <project-name>
     /*ts*/
     spotlight ts <template-name> <project-name>
+    /*vite*/
+    spotlight vite <template-name> <project-name>
 
 example:
 
@@ -25,6 +27,8 @@ example:
     spotlight react my-project
     /*ts*/
     spotlight ts react my-project
+    /*vite*/
+    spotlight vite react my-project
 
 <blockquote>
 可以支持的template如下(安装完毕后使用 “spotlight” 命令可查阅)：<br>
@@ -48,6 +52,8 @@ The templates that can be supported are as follows (use the “spotlight ” com
     13. ts vue                typescript+vue2
     14. ts hook               react hook+typescript+mobx+router+antd4
     15. ts vue3               vue3+typescript+pinia+router+arco.design
+    16. vite react            react hook+typescript+mobx+router+antd4+vite
+    17. vite vue3             vue3+typescript+pinia+router+arco.design+vite
 
 ### windows10 error （可能发生的）
     ...
@@ -73,7 +79,7 @@ The templates that can be supported are as follows (use the “spotlight ” com
 </blockquote>
 <br>
 
-### gulp
+### gulp (webpack模板)
 <blockquote>
 多套模板都涉及到和gulp的配合使用，所以请确保你的gulp是全局安装的！
 <br/>
