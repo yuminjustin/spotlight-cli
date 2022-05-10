@@ -4,7 +4,7 @@
 
 const chalk = require('chalk')
 const program = require('commander')
-const commandArr = ['normal', 'react', 'redux', 'vue', 'vuex', 'backbone', 'mithril', 'san', 'mobx', 'hook', 'ts']
+const commandArr = ['normal', 'react', 'redux', 'vue', 'vuex', 'backbone', 'mithril', 'san', 'mobx', 'hook', 'ts', 'vite']
 
 process.env.NODE_PATH = __dirname + '/../node_modules/'
 program.version(require('../package').version)
@@ -30,6 +30,7 @@ function style_commander(str) {
 	else if(str=='mobx') return "react+mobx+router+antd3";
 	else if(str=='hook') return "react hook+mobx+router+antd4";
 	else if(str=='ts') return "typescript模板";
+	else if(str=='vite') return "vite模板";
 }
 
 program.on('--help', () => {
@@ -43,6 +44,9 @@ program.on('--help', () => {
 	console.log()
 	console.log(chalk.green('      ts'))
 	console.log(chalk.bold.rgb(238, 120, 8)('      spotlight ts react my-project'))
+	console.log()
+	console.log(chalk.green('      vite'))
+	console.log(chalk.bold.rgb(238, 120, 8)('      spotlight vite react my-project'))
 	console.log()
 	console.log(chalk.bgRedBright(' spotlight templates：'))
 	console.log(chalk.blue("-------------------------------------------------"))
@@ -61,6 +65,8 @@ program.on('--help', () => {
 	console.log(chalk.cyan('    13.ts vue                ') + 'typescript+vue2')
 	console.log(chalk.cyan('    14.ts hook               ') + 'react hook+typescript+mobx+router+antd4')
 	console.log(chalk.cyan('    15.ts vue3               ') + 'vue3+typescript+pinia+router+arco-design')
+	console.log(chalk.cyan('    16.vite react              ') + 'react hook+typescript+mobx+router+antd4+vite')
+	console.log(chalk.cyan('    17.vite vue3               ') + 'vue3+typescript+pinia+router+arco-design+vite')
 	console.log(chalk.blue("-------------------------------------------------"))
 })
 
