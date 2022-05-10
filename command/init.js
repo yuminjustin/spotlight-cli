@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const download = require('download-git-repo')
 const exists = require('fs').existsSync
 const path = require('path')
@@ -36,11 +37,14 @@ module.exports = (program, c) => {
         case "vuex":
             template = 'vue-vuex';
             break;
+        case "vite":
+            template = 'vite-' + rawName;
+            break;
         case "ts":
             template = 'ts-' + (rawName == 'hook' ? hook : rawName == 'vue3' ? 'vue3-pinia' : rawName);
             break;
     }
-    if (c == "ts") rawName = program.args[1]; // ts 目录
+    if (c == "ts" || c == "vite") rawName = program.args[1]; // 目录
 
     url = `yuminjustin/spotlight-templates-${template}`;
 
